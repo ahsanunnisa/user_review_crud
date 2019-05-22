@@ -1,0 +1,15 @@
+create new entity
+
+curl -H "Content-Type: application/json" -X POST -d '{"order_id":"2020","product_id":"0004", "user_id":"90733", "rating":"5", "review":"enak"}' http://127.0.0.1:5000/add
+
+read table
+
+curl -H "Content-Type: application/json" http://127.0.0.1:5000/
+
+update entity
+
+curl -H "Content-Type: application/json" -X POST -d '{"order_id":"2020","product_id":"0004", "user_id":"90733", "rating":"4", "review":"enak tapi kurang banyak", "id":"1"}' http://127.0.0.1:5000/update
+
+delete entity
+
+curl -H "Content-Type: application/json" -X DELETE http://127.0.0.1:5000/delete/4
